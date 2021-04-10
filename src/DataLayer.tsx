@@ -1,4 +1,5 @@
 import { createContext, FC, useContext, useReducer } from "react";
+// import { initialState } from "./reducer";
 
 interface IDataLayer {
   initialState: any;
@@ -12,7 +13,11 @@ export const DataLayer: FC<IDataLayer> = ({
   reducer,
   children,
 }): any => {
-  <DataLayerContext.Provider value={useReducer(reducer, initialState)}>
-    {children}
-  </DataLayerContext.Provider>;
+  return (
+    <DataLayerContext.Provider value={useReducer(reducer, initialState)}>
+      {children}
+    </DataLayerContext.Provider>
+  );
 };
+
+export const useDataLayerValue = () => useContext(DataLayerContext);

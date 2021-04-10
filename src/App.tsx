@@ -22,7 +22,6 @@ function App() {
         console.log(user);
       });
     }
-    console.log(token);
   }, [token]);
 
   return <div>{token ? <Player /> : <Login />}</div>;
