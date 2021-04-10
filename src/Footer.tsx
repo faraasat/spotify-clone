@@ -12,12 +12,20 @@ function footer() {
   return (
     <div className="footer">
       <div className="footer__left">
-        <p>Album and Song Details</p>
+        <img
+          className="footer__albumLogo"
+          src="https://upload.wikipedia.org/wikipedia"
+          alt=""
+        />
+        <div className="footer__songInfo">
+          <h4>No song is Playing</h4>
+          <p>Yeah</p>
+        </div>
       </div>
       <div className="footer__center">
         <ShuffleIcon className="footer__green" />
         <SkipPreviousIcon className="footer__icon" />
-        <PlayCircleOutlineIcon fontSize="large" className="footer__large" />
+        <PlayCircleOutlineIcon fontSize="large" className="footer__icon" />
         <SkipNextIcon className="footer__icon" />
         <RepeatIcon className="footer__green" />
       </div>
