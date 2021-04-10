@@ -27,7 +27,6 @@ function App() {
           user: user,
         });
       });
-
       spotify.getUserPlaylists().then((playlists: any) => {
         dispatch({
           type: "SET_PLAYLISTS",
