@@ -1,0 +1,27 @@
+.login {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.login > img {
+  width: 100%;
+}
+
+.login--anchor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login--anchor > a {
+  padding: 20px;
+  background-color: #1db954;
+  border-radius: 99px;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  /* width: max-content; */
+}
