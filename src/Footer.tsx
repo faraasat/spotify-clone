@@ -7,15 +7,17 @@ import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
 import VolumeDownIcon from "@material-ui/icons/VolumeDown";
 import { Grid, Slider } from "@material-ui/core";
 import "./Footer.css";
+import { useDataLayerValue } from "./DataLayer";
 
-function footer() {
+function Footer() {
+  const [{ discover_weekly }] = useDataLayerValue();
   return (
     <div className="footer">
       <div className="footer__left">
         <img
           className="footer__albumLogo"
-          src="https://upload.wikipedia.org/wikipedia"
-          alt=""
+          src={discover_weekly?.images[0].url}
+          alt={discover_weekly?.name}
         />
         <div className="footer__songInfo">
           <h4>No song is Playing</h4>
@@ -46,4 +48,4 @@ function footer() {
   );
 }
 
-export default footer;
+export default Footer;

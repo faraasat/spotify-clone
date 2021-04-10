@@ -24,7 +24,7 @@ function Sidebar() {
       <hr />
       {playlists?.items?.length !== 0 ? (
         playlists?.items?.map((playlist: any) => {
-          return <SidebarOptions title={playlist.name} />;
+          return <SidebarOptions key={playlist.id} title={playlist.name} />;
         })
       ) : (
         <SidebarOptions title={"Playlist is Empty"} />
