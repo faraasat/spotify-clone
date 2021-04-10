@@ -6,7 +6,7 @@ interface IDataLayer {
   reducer: any;
 }
 
-export const DataLayerContext = createContext({});
+export const DataLayerContext: any = createContext([]);
 
 export const DataLayer: FC<IDataLayer> = ({
   initialState,
@@ -20,4 +20,4 @@ export const DataLayer: FC<IDataLayer> = ({
   );
 };
 
-export const useDataLayerValue = () => useContext(DataLayerContext);
+export const useDataLayerValue: any = () => useContext(DataLayerContext);
