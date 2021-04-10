@@ -1,4 +1,5 @@
 import "./Login.css";
+import { loginUrl } from "./spotify";
 
 const Login = () => {
   return (
@@ -8,7 +9,7 @@ const Login = () => {
         alt="Spotify Logo"
       />
       <span className="login--anchor">
-        <a href="https://dsasds">LOGIN WITH SPOTIFY</a>
+        <a href={loginUrl}>LOGIN WITH SPOTIFY</a>
       </span>
     </div>
   );
